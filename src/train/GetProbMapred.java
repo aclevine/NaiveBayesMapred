@@ -54,7 +54,7 @@ public class GetProbMapred {
 		  System.exit(2);
 		}
 		Job job = Job.getInstance(conf, "get lemma probabilities per profession");
-		job.setJarByClass(GetCountMapred.class);
+		job.setJarByClass(GetProbMapred.class);
 		
 		job.setInputFormatClass(KeyValueTextInputFormat.class);
 		job.setOutputKeyClass(Text.class);
