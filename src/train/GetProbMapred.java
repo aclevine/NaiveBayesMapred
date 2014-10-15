@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -13,7 +16,6 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.KeyValueTextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-import org.apache.hadoop.util.GenericOptionsParser;
 
 import utils.StringIntegerList;
 import utils.StringIntegerList.StringInteger;
@@ -22,49 +24,58 @@ import utils.StringDoubleList.StringDouble;
 
 public class GetProbMapred {
 
-	public static class GetCountMapper extends
-		Mapper<Text, Text, String, StringDoubleList> {
+	public static class GetProbMapper extends
+		Mapper<Text, Text, Text, Text> {
 
-		// Int article_counts
-		// Hashmap article_per_profession_counts
+		public static Map<String, Double> lemmaProb = new HashMap<String, Double>();
+        public static Map<String, Integer> professionCount = new HashMap<String, Integer>();
 		
-		protected void setup(Mapper<Text, Text, String, StringDoubleList>.Context context)
+		protected void setup(Mapper<Text, Text, Text, Text>.Context context)
 				throws IOException, InterruptedException {
 			// TODO: load articleCount, articlePerProfessionCounts
-
-			// build articlePerProfessionProbs?
 			
+			InputStream input = this.getClass().getResourceAsStream("ArticleCounts");
+			BufferedReader br = new BufferedReader(new InputStreamReader(input));
+			String line;
+			while ((line = br.readLine()) != null) {
+				String[] splitter = line.split("\t");		
+				professionCount.put(splitter[0],  Integer.parseInt(splitter[1])); 
+			}
 			super.setup(context);
 		}
 
-		
-		public void map(Text articleId, Text LemmaList, Context context)
-				throws IOException, InterruptedException {	
-			// TODO: build: 
-			//< String profession,  StringDoubleList [<lemma1, prob1>, <lemma2, prob2> ...] >
+		public void map(Text profession, Text LemmaList, Context context)
+				throws IOException, InterruptedException {		
+			StringIntegerList list = new StringIntegerList();
+			list.readFromString(LemmaList.toString());
+			
+			for (StringInteger stringInt : list.getIndices()) {
+				String lemma = stringInt.getString();
+				Integer count = stringInt.getValue();	
+				double probability = (double)count / professionCount.get(profession.toString());
+				lemmaProb.put(lemma, probability);
+			}
+			StringDoubleList sdl = new StringDoubleList(lemmaProb);
+			context.write(new Text(profession.toString()), new Text(sdl.toString()));
 		}
 	}
 
 	public static void main(String[] args) 
 			throws IOException, ClassNotFoundException, InterruptedException {
+		
 		Configuration conf = new Configuration();
-		String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-		if (otherArgs.length != 2) {
-		  System.err.println("Usage: InvertedIndexMapred <in> <out>");
-		  System.exit(2);
-		}
 		Job job = Job.getInstance(conf, "get lemma probabilities per profession");
 		job.setJarByClass(GetProbMapred.class);
-		
+		job.setMapperClass(GetProbMapper.class);
+
 		job.setInputFormatClass(KeyValueTextInputFormat.class);
 		job.setOutputKeyClass(Text.class);
-		job.setOutputValueClass(StringDoubleList.class);
+		job.setOutputValueClass(Text.class);
 		
-		job.setMapperClass(GetCountMapper.class);
-		
-		FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-		FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+		FileInputFormat.addInputPath(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
+
 	}	
 }
