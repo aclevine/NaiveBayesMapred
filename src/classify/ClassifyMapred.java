@@ -38,14 +38,14 @@ public class ClassifyMapred {
 				throws IOException, InterruptedException {
 			// TODO: read profession probabilities, feature given profession probabilites
 
-			InputStream is = this.getClass().getResourceAsStream("prob.txt"); // check with Rachel how to load from hdfs again?
-			BufferedReader br = new BufferedReader(new InputStreamReader(is)); //Open text				
+            URI titleFile = context.getCacheFiles()[0];
+            BufferedReader br = new BufferedReader(new FileReader(titleFile.getPath()));
 			
 			String line;
 			while ((line = br.readLine()) != null){
             	String[] labelIndices = line.split("\\s+", 1);
-            	StringDoubleList list = new StringDoubleList();	
-    			list.readFromString(labelIndices[0].toString());
+            	StringDoubleList list = new StringDoubleList();
+            	list.readFromString(labelIndices[0].toString());
     			
     			HashMap<String, Double> temp = new HashMap<String, Double>();
     			for (StringDouble index : list.getIndices()) {    			
@@ -68,7 +68,7 @@ public class ClassifyMapred {
 
 	        for (String label : labelScores.keySet()) {
 	        	HashMap<String, Double> scores = labelScores.get(label);
-	        	Double prob = Math.log( scores.get("__PROFESSION__") ); // need to get Tifara to make a name for this
+	        	Double prob = Math.log( scores.get("__LABEL__") );
 	        	for (StringInteger index : list.getIndices()) {	
 					String lemma = index.getString();
 					int freq = index.getValue();
@@ -98,8 +98,8 @@ public class ClassifyMapred {
 		
 		Configuration conf = new Configuration();
 	    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-	    if (otherArgs.length != 2) {
-	      System.err.println("Usage: InvertedIndexMapred <in> <out>");
+	    if (otherArgs.length != 3) {
+	      System.err.println("Usage: InvertedIndexMapred <in> <out> <prob-file>");
 	      System.exit(2);
 	    }
 		Job job = Job.getInstance(conf, "calculate top 3 professions per <title, lemmaList>");
@@ -116,8 +116,9 @@ public class ClassifyMapred {
 		
 		FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
 		FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+        job.addCacheFile(new Path(otherArgs[2]).toUri());
+
 		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
-		
 	}		
 }

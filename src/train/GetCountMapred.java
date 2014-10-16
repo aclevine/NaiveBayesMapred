@@ -29,7 +29,7 @@ public class GetCountMapred {
 	public static class GetCountMapper extends
 		Mapper<Text, Text, Text, StringIntegerList> {
 		
-		public static HashMap<String, String> titleprofession = new HashMap<String, String>();
+		public static HashMap<String, String[]> titleProfessions = new HashMap<String, String[]>();
 		
 		protected void setup(Mapper<Text, Text, Text, StringIntegerList>.Context context)
 				throws IOException, InterruptedException {
@@ -39,15 +39,11 @@ public class GetCountMapred {
 	        while ((line = br.readLine()) != null) {
 	        	//split by " : "
 	        	String[] keyvalue = line.split(" : ");
+	        	//split multiple professions
 	        	String[] professions = keyvalue[1].split(", ");
-	        	//decode url encoding
-	        	//URLDecoder dc = new URLDecoder();
-	    		//String title = dc.decode(keyvalue[0], "US-ASCII");
 	        	String title = keyvalue[0];
 	        	//convert to hashmap
-	    		for (int i=0; i<professions.length; i++) {
-	    			titleprofession.put(title, professions[i]);
-	    		}
+	        	titleProfessions.put(title, professions);
 	        }
 			super.setup(context);
 		}
@@ -56,17 +52,18 @@ public class GetCountMapred {
 				throws IOException, InterruptedException {	
 			//get title
 			String title = articleId.toString();
-			String profession = titleprofession.get(title.toString());
+			String[] professions = titleProfessions.get(title.toString());
 			//translate list indices to StringIntegerList
 			StringIntegerList list = new StringIntegerList();
 			list.readFromString(indices.toString());
 			//write profession and StringIntegerList to context
-			if(profession != null) {
-				context.write(new Text(profession), list);
+			if (professions != null){
+				for (String profession: professions){
+					context.write(new Text(profession), list);
+				}
 			}
 		}
 	}
-	
 	
 	public static class GetCountReducer extends 
 		Reducer<Text, StringIntegerList, Text, StringIntegerList> {
@@ -83,7 +80,7 @@ public class GetCountMapred {
 		
 	    public void reduce(Text Profession, Iterable<StringIntegerList> lemmaCounts, Context context) 
 	    		throws IOException, InterruptedException {
-		    HashMap<String, Integer> wordcount = new HashMap();
+		    HashMap<String, Integer> wordcount = new HashMap<String, Integer>();
 	    	Integer professionCount = 0;
 	    	for (StringIntegerList lc : lemmaCounts) {
 	    		articleCount++;
@@ -91,8 +88,9 @@ public class GetCountMapred {
 	    		List<StringInteger> l = lc.getIndices();
 	    		for(StringInteger si : l) {
 	    			String lemma = si.getString();
+	    			Integer count = si.getValue();
 	    			if(wordcount.containsKey(si.getString())) {
-	                    wordcount.put(lemma,wordcount.get(lemma)+1);
+	                    wordcount.put(lemma,wordcount.get(lemma) + 1 );
 	                } else {
 	                    wordcount.put(lemma, 1);
 	                }
@@ -116,7 +114,7 @@ public class GetCountMapred {
 		Configuration conf = new Configuration();
 	    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 	    if (otherArgs.length != 2) {
-	      System.err.println("Usage: InvertedIndexMapred <in> <out>");
+	      System.err.println("Usage: GetCountMapred <input-filepath> <output-filepath>");
 	      System.exit(2);
 	    }
 		Job job = Job.getInstance(conf, "get lemma counts per profession");
@@ -137,5 +135,5 @@ public class GetCountMapred {
 		 Text.class, Integer.class);
 		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
-	}	
+	}
 }
