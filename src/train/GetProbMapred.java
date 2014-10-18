@@ -74,10 +74,10 @@ public class GetProbMapred {
 	      System.err.println("Usage: GetProbMapred <input-filepath> <output-filepath>");
 	      System.exit(2);
 	    }
-
 		Job job = Job.getInstance(conf, "get lemma probabilities per profession");
 		job.setJarByClass(GetProbMapred.class);
 		job.setMapperClass(GetProbMapper.class);
+        job.setNumReduceTasks(0);
 
 		job.setInputFormatClass(KeyValueTextInputFormat.class);
 		job.setOutputKeyClass(Text.class);

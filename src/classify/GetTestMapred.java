@@ -17,11 +17,8 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.KeyValueTextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
-import org.apache.hadoop.io.LongWritable;
 
-import utils.StringIntegerList;
 import utils.StringIntegerList.StringInteger;
-import edu.umd.cloud9.collection.wikipedia.WikipediaPage;
 
 /**
  * This class is used for Section A of assignment 1. You are supposed to
@@ -61,7 +58,7 @@ public class GetTestMapred {
 		@Override
 		public void map(Text articleId, Text indices, Context context)
 				throws IOException, InterruptedException {
-			String title = articleId.toString().replaceAll("[\\r\\n]+", " ");
+			String title = articleId.toString();
 			if(peopleArticlesTitles.contains(title)) {
 				context.write(new Text(title), indices);
 			}
@@ -73,23 +70,22 @@ public class GetTestMapred {
 		Configuration conf = new Configuration();        
 	    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 	    if (otherArgs.length != 2) {
-	      System.err.println("Usage: GetArticlesMapred <in> <out>");
+	      System.err.println("Usage: GetArticlesMapred <input-filepath> <output-filepath>");
 	      System.exit(2);
 	    }		
 		Job job = Job.getInstance(conf, "filter down to test data");
         job.setJarByClass(GetTestMapred.class);
         job.setMapperClass(GetTestMapper.class);
-        job.setNumReduceTasks(0);
 		
         job.setInputFormatClass(KeyValueTextInputFormat.class);
 		job.setMapOutputKeyClass(Text.class);
-		job.setMapOutputValueClass(StringInteger.class);        
+		job.setMapOutputValueClass(Text.class);        
 
         FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
         FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
-		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
+		job.getConfiguration().set("mapreduce.job.queuename", "hadoop07");
         System.exit(job.waitForCompletion(true) ? 0 : 1);	
 	}
 }
