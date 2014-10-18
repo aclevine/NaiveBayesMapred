@@ -42,19 +42,11 @@ public class ClassifyMapred {
 		
 		protected void setup(Mapper<Text, Text, Text, Text>.Context context)
 				throws IOException, InterruptedException {
-			//read filter file
-			InputStream is = this.getClass().getResourceAsStream("profession_test.txt");
-			BufferedReader br = new BufferedReader(new InputStreamReader(is)); //Open text				
-			String title;
-            while ((title = br.readLine()) != null) {
-                peopleArticlesTitles.add(title);
-            }
-            br.close();
 			//read probability file
 			URI titleFile = context.getCacheFiles()[0];
-            BufferedReader br2 = new BufferedReader(new FileReader(titleFile.getPath()));			
+            BufferedReader br = new BufferedReader(new FileReader(titleFile.getPath()));			
 			String line;
-            while ((line = br2.readLine()) != null){
+            while ((line = br.readLine()) != null){
 	        	String[] labelIndices = line.split("\t");
             	StringDoubleList list = new StringDoubleList();
             	list.readFromString(labelIndices[1].toString());
@@ -67,7 +59,7 @@ public class ClassifyMapred {
     			}
     			labelScores.put(labelIndices[0], temp);
             }
-			br2.close();
+			br.close();
 			super.setup(context);
 		}
 		
@@ -78,32 +70,29 @@ public class ClassifyMapred {
 			StringIntegerList list = new StringIntegerList();	
 			list.readFromString(indices.toString());
 	        TreeMap<Double,String> guesses = new TreeMap<Double,String>(Collections.reverseOrder());			
-	        String title = articleId.toString();
-	        if(peopleArticlesTitles.contains(title)) {
-		        for (String label : labelScores.keySet()) {
-		        	HashMap<String, Double> scores = labelScores.get(label);
-		        	Double prob = Math.log( scores.get("__LABEL__") );
-		        	for (StringInteger index : list.getIndices()) {	
-						String lemma = index.getString();
-						int freq = index.getValue();
-						if (scores.containsKey(lemma)) {
-							prob += freq * Math.log(scores.get(lemma));
-						}	
-		        	}
-		        	guesses.put(prob, label);
-		        }
-		         
-				String[] top3 = new String[3];
-				Integer i = 0;
-		        for (Double prob: guesses.keySet()){
-		        	if (i < 3) {
-		        		top3[i] = guesses.get(prob);
-		        		i++;
-		        	} else {
-		        		context.write(articleId, new Text(": " + StringUtils.join(top3, ", ")));
-		        		break;
-		        	}
-		        }
+	        for (String label : labelScores.keySet()) {
+	        	HashMap<String, Double> scores = labelScores.get(label);
+	        	//Double prob = Math.log( scores.get("__LABEL__") );
+	        	Double prob = 0.0;
+	        	for (StringInteger index : list.getIndices()) {	
+					String lemma = index.getString();
+					int freq = index.getValue();
+					if (scores.containsKey(lemma)) {
+						prob += freq * Math.log(scores.get(lemma));
+					}
+	        	}
+	        	guesses.put(prob, label);
+	        }
+			String[] top3 = new String[3];
+			Integer i = 0;
+	        for (Double prob: guesses.keySet()){
+	        	if (i < 3) {
+	        		top3[i] = guesses.get(prob);
+	        		i++;
+	        	} else {
+	        		context.write(articleId, new Text(": " + StringUtils.join(top3, ", ")));
+	        		break;
+	        	}
 	        }
 		}
 	}
@@ -114,8 +103,8 @@ public class ClassifyMapred {
 		Configuration conf = new Configuration();
 
 		String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-	    if (otherArgs.length != 2) {
-	      System.err.println("Usage: ClassifyMapred <input-filepath> <output-filepath>");
+	    if (otherArgs.length != 3) {
+	      System.err.println("Usage: ClassifyMapred <input-filepath> <output-filepath> <probabilities-path>");
 	      System.exit(2);
 	    }
 		Job job = Job.getInstance(conf, "calculate top 3 professions per <title, lemmaList>");
@@ -134,6 +123,5 @@ public class ClassifyMapred {
 
 		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
-
 	}		
 }

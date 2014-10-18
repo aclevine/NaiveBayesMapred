@@ -60,7 +60,7 @@ public class GetTestMapred {
 				throws IOException, InterruptedException {
 			String title = articleId.toString();
 			if(peopleArticlesTitles.contains(title)) {
-				context.write(new Text(title), indices);
+				context.write(new Text(title), new Text(indices.toString()));
 			}
 		}
 	}
@@ -85,7 +85,7 @@ public class GetTestMapred {
         FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
-		job.getConfiguration().set("mapreduce.job.queuename", "hadoop07");
-        System.exit(job.waitForCompletion(true) ? 0 : 1);	
+		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
 	}
 }
