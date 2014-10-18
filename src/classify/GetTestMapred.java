@@ -63,13 +63,12 @@ public class GetTestMapred {
 				throws IOException, InterruptedException {
 			String title = articleId.toString().replaceAll("[\\r\\n]+", " ");
 			if(peopleArticlesTitles.contains(title)) {
-				context.write(new Text(title), new Text(indices.toString()));
+				context.write(new Text(title), indices);
 			}
 		}
 	}
 
 	public static void main(String[] args) throws Exception {
-
 		//Get Articles
 		Configuration conf = new Configuration();        
 	    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();

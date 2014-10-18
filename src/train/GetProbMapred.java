@@ -35,8 +35,8 @@ public class GetProbMapred {
 		protected void setup(Mapper<Text, Text, Text, Text>.Context context)
 				throws IOException, InterruptedException {
 			// TODO: load articleCount, articlePerProfessionCounts
-            URI titleFile = context.getCacheFiles()[0];
-            BufferedReader br = new BufferedReader(new FileReader(titleFile.getPath()));
+			InputStream is = this.getClass().getResourceAsStream("ArticleCounts");
+			BufferedReader br = new BufferedReader(new InputStreamReader(is)); //Open text				
 
             String line;
 			while ((line = br.readLine()) != null) {
@@ -70,8 +70,8 @@ public class GetProbMapred {
 		Configuration conf = new Configuration();
 
 	    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-	    if (otherArgs.length != 3) {
-	      System.err.println("Usage: GetProbMapred <input-filepath> <output-filepath> <article-count-path>");
+	    if (otherArgs.length != 2) {
+	      System.err.println("Usage: GetProbMapred <input-filepath> <output-filepath>");
 	      System.exit(2);
 	    }
 
@@ -85,10 +85,8 @@ public class GetProbMapred {
 		
 		FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
 		FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
-        job.addCacheFile(new Path(otherArgs[2]).toUri());
 
 		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
-
 	}
 }

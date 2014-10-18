@@ -9,8 +9,12 @@ import java.net.URI;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -31,21 +35,20 @@ public class ClassifyMapred {
 
 	public static class ClassifyMapper extends Mapper<Text, Text, Text, Text> {
 	
-		public static HashMap<String, HashMap> labelScores = new HashMap<String, HashMap>();
-		public static Double threshold = 0.5;
+		HashMap<String, HashMap<String, Double>> labelScores = new HashMap<String, HashMap<String, Double>>();
+		public static Double threshold = 0.0; // if you wanted to try and get exact number of labels instead of top 3 guesses
 		
 		protected void setup(Mapper<Text, Text, Text, Text>.Context context)
 				throws IOException, InterruptedException {
 			// TODO: read profession probabilities, feature given profession probabilites
-
             URI titleFile = context.getCacheFiles()[0];
             BufferedReader br = new BufferedReader(new FileReader(titleFile.getPath()));
 			
 			String line;
 			while ((line = br.readLine()) != null){
-            	String[] labelIndices = line.split("\\s+", 1);
+	        	String[] labelIndices = line.split("\t");
             	StringDoubleList list = new StringDoubleList();
-            	list.readFromString(labelIndices[0].toString());
+            	list.readFromString(labelIndices[1].toString());
     			
     			HashMap<String, Double> temp = new HashMap<String, Double>();
     			for (StringDouble index : list.getIndices()) {    			
@@ -59,7 +62,7 @@ public class ClassifyMapred {
 		}
 		
 		public void map(Text articleId, Text indices, Context context)
-				throws IOException, InterruptedException {	
+				throws IOException, InterruptedException {
 			// TODO: build: 
 			// < Title,  <top 3 predictions above threshold> ] > 
 			StringIntegerList list = new StringIntegerList();	
@@ -75,17 +78,18 @@ public class ClassifyMapred {
 					if (scores.containsKey(lemma)) {
 						prob += freq * Math.log(scores.get(lemma));
 					}	
-	        	}	        	
+	        	}    	
 	        	guesses.put(prob, label);
 	        }
 	         
-			String top3 = "";	
+			String[] top3 = new String[3];
+			Integer i = 0;
 	        for (Double prob: guesses.keySet()){
-	        	if (prob >= threshold) {
-	        		top3 += ("," +  guesses.get(prob));
-	        	}
-	        	else {
-	        		context.write(articleId, new Text(":" + top3));
+	        	if (i < 3 &&  prob >= threshold) {
+	        		top3[i] = guesses.get(prob);
+	        		i++;
+	        	} else {
+	        		context.write(articleId, new Text(": " + StringUtils.join(top3, ", ")));
 	        		break;
 	        	}
 	        }
@@ -97,9 +101,10 @@ public class ClassifyMapred {
 			ClassNotFoundException, InterruptedException {
 		
 		Configuration conf = new Configuration();
-	    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+
+		String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 	    if (otherArgs.length != 3) {
-	      System.err.println("Usage: InvertedIndexMapred <in> <out> <prob-file>");
+	      System.err.println("Usage: ClassifyMapred <input-filepath> <output-filepath> <probabilities-filepath>");
 	      System.exit(2);
 	    }
 		Job job = Job.getInstance(conf, "calculate top 3 professions per <title, lemmaList>");
@@ -120,5 +125,7 @@ public class ClassifyMapred {
 
 		job.getConfiguration().set("mapreduce.job.queuename", "hadoop14");
 		System.exit(job.waitForCompletion(true) ? 0 : 1);
+		job.addCacheFile(new Path("file").toUri());
+
 	}		
 }
