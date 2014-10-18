@@ -62,7 +62,7 @@ public class StringDoubleList implements Writable {
 
 	private List<StringDouble> indices;
 	private Map<String, Double> indiceMap;
-	private Pattern p = Pattern.compile("<([^>]+),(\\d+)>");
+	private Pattern p = Pattern.compile("<([^>]+),(\\d+\\.\\d+)>");
 
 	public StringDoubleList() {
 		indices = new Vector<StringDouble>();
