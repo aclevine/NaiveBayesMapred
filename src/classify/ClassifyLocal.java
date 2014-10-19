@@ -2,6 +2,7 @@ package classify;
 
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -55,7 +56,7 @@ public class ClassifyLocal {
 		InputStream is2 = m.getClass().getResourceAsStream("test_data");
 		BufferedReader br2 = new BufferedReader(new InputStreamReader(is2)); //Open text
 
-		FileWriter fw = new FileWriter("results.txt");
+		BufferedWriter fw = new BufferedWriter(new FileWriter("results.txt"));
 		
 		String line;
 		while ((line = br2.readLine()) != null){
