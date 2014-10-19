@@ -1,0 +1,488 @@
+activist	<__LABEL__,0.5>,<activist,0.5>
+actor	<__LABEL__,0.5>,<actor,0.5>
+actres	<__LABEL__,0.5>,<actr,0.5>
+actress	<__LABEL__,0.5>,<actress,0.5>
+administrator	<__LABEL__,0.5>,<administr,0.5>
+admiral	<__LABEL__,0.5>,<admir,0.5>
+agronomist	<__LABEL__,0.5>,<agronomist,0.5>
+all-american college football player	<__LABEL__,0.5>,<american,0.5>,<colleg,0.5>,<footbal,0.5>,<player,0.5>
+ambassador	<__LABEL__,0.5>,<ambassador,0.5>
+anatomist	<__LABEL__,0.5>,<anatomist,0.5>
+animator	<__LABEL__,0.5>,<anim,0.5>
+anime character designer	<__LABEL__,0.5>,<anim,0.5>,<charact,0.5>,<design,0.5>
+anthropologist	<__LABEL__,0.5>,<anthropologist,0.5>
+antiquarian	<__LABEL__,0.5>,<antiquarian,0.5>
+archaeologist	<__LABEL__,0.5>,<archaeologist,0.5>
+archbishop	<__LABEL__,0.5>,<archbishop,0.5>
+archdeacon	<__LABEL__,0.5>,<archdeacon,0.5>
+archer	<__LABEL__,0.5>,<archer,0.5>
+architect	<__LABEL__,0.5>,<architect,0.5>
+army general	<__LABEL__,0.5>,<armi,0.5>,<general,0.5>
+army medal	<__LABEL__,0.5>,<armi,0.5>,<medal,0.5>
+army officer	<__LABEL__,0.5>,<armi,0.5>,<offic,0.5>
+art director	<__LABEL__,0.5>,<art,0.5>,<director,0.5>
+art historian	<__LABEL__,0.5>,<art,0.5>,<historian,0.5>
+artificial intelligence researcher	<__LABEL__,0.5>,<artifici,0.5>,<intellig,0.5>,<research,0.5>
+artist	<__LABEL__,0.5>,<artist,0.5>
+artistic gymnast	<__LABEL__,0.5>,<artist,0.5>,<gymnast,0.5>
+association football player	<__LABEL__,0.5>,<associ,0.5>,<footbal,0.5>,<player,0.5>
+association footballer	<__LABEL__,0.5>,<associ,0.5>,<footbal,0.5>
+astrologer	<__LABEL__,0.5>,<astrolog,0.5>
+astronomer	<__LABEL__,0.5>,<astronom,0.5>
+athlete	<__LABEL__,0.5>,<athlet,0.5>
+athletics (sport) competitor	<__LABEL__,0.5>,<athlet,0.5>,<sport,0.5>,<competitor,0.5>
+atmospheric scientist	<__LABEL__,0.5>,<atmospher,0.5>,<scientist,0.5>
+attorney	<__LABEL__,0.5>,<attorney,0.5>
+author	<__LABEL__,0.5>,<author,0.5>
+autobiographer	<__LABEL__,0.5>,<autobiograph,0.5>
+aviator	<__LABEL__,0.5>,<aviat,0.5>
+b	<__LABEL__,0.5>,<b,0.5>
+badminton player	<__LABEL__,0.5>,<badminton,0.5>,<player,0.5>
+ball player	<__LABEL__,0.5>,<ball,0.5>,<player,0.5>
+ballet dancer	<__LABEL__,0.5>,<ballet,0.5>,<dancer,0.5>
+banker	<__LABEL__,0.5>,<banker,0.5>
+baron	<__LABEL__,0.5>,<baron,0.5>
+baseball coach	<__LABEL__,0.5>,<basebal,0.5>,<coach,0.5>
+baseball player	<__LABEL__,0.5>,<basebal,0.5>,<player,0.5>
+baseball umpire	<__LABEL__,0.5>,<basebal,0.5>,<umpir,0.5>
+basketball coach	<__LABEL__,0.5>,<basketbal,0.5>,<coach,0.5>
+basketball player	<__LABEL__,0.5>,<basketbal,0.5>,<player,0.5>
+basketball player-coach	<__LABEL__,0.5>,<basketbal,0.5>,<player,0.5>,<coach,0.5>
+beach volleyball player	<__LABEL__,0.5>,<beach,0.5>,<volleybal,0.5>,<player,0.5>
+biathlete	<__LABEL__,0.5>,<biathlet,0.5>
+biochemist	<__LABEL__,0.5>,<biochemist,0.5>
+biographer	<__LABEL__,0.5>,<biograph,0.5>
+biologist	<__LABEL__,0.5>,<biologist,0.5>
+bishop	<__LABEL__,0.5>,<bishop,0.5>
+bobsledder	<__LABEL__,0.5>,<bobsledd,0.5>
+bosnia	<__LABEL__,0.5>,<bosnia,0.5>
+botanist	<__LABEL__,0.5>,<botanist,0.5>
+botanists active	<__LABEL__,0.5>,<botanist,0.5>,<activ,0.5>
+boxer	<__LABEL__,0.5>,<boxer,0.5>
+broadcaster	<__LABEL__,0.5>,<broadcast,0.5>
+business theorist	<__LABEL__,0.5>,<busi,0.5>,<theorist,0.5>
+businessman	<__LABEL__,0.5>,<businessman,0.5>
+businessperson	<__LABEL__,0.5>,<businessperson,0.5>
+businesswoman	<__LABEL__,0.5>,<businesswoman,0.5>
+camogie player	<__LABEL__,0.5>,<camogi,0.5>,<player,0.5>
+canoe racer	<__LABEL__,0.5>,<cano,0.5>,<racer,0.5>
+canoe slalom racer	<__LABEL__,0.5>,<cano,0.5>,<slalom,0.5>,<racer,0.5>
+canoeist	<__LABEL__,0.5>,<canoeist,0.5>
+cartographer	<__LABEL__,0.5>,<cartograph,0.5>
+cartoonist	<__LABEL__,0.5>,<cartoonist,0.5>
+catholic bishop	<__LABEL__,0.5>,<cathol,0.5>,<bishop,0.5>
+catholic cardinal	<__LABEL__,0.5>,<cathol,0.5>,<cardin,0.5>
+catholic priest	<__LABEL__,0.5>,<cathol,0.5>,<priest,0.5>
+chef	<__LABEL__,0.5>,<chef,0.5>
+chemical engineer	<__LABEL__,0.5>,<chemic,0.5>,<engin,0.5>
+chemist	<__LABEL__,0.5>,<chemist,0.5>
+chess player	<__LABEL__,0.5>,<chess,0.5>,<player,0.5>
+chief	<__LABEL__,0.5>,<chief,0.5>
+children's writer	<__LABEL__,0.5>,<children,0.5>,<writer,0.5>
+choreographer	<__LABEL__,0.5>,<choreograph,0.5>
+cinematographer	<__LABEL__,0.5>,<cinematograph,0.5>
+civil engineer	<__LABEL__,0.5>,<civil,0.5>,<engin,0.5>
+civil servant	<__LABEL__,0.5>,<civil,0.5>,<servant,0.5>
+clergyman	<__LABEL__,0.5>,<clergyman,0.5>
+coach	<__LABEL__,0.5>,<coach,0.5>
+cognitive scientist	<__LABEL__,0.5>,<cognit,0.5>,<scientist,0.5>
+college football coach	<__LABEL__,0.5>,<colleg,0.5>,<footbal,0.5>,<coach,0.5>
+college football player	<__LABEL__,0.5>,<colleg,0.5>,<footbal,0.5>,<player,0.5>
+comedian	<__LABEL__,0.5>,<comedian,0.5>
+comic artist	<__LABEL__,0.5>,<comic,0.5>,<artist,0.5>
+communication scholar	<__LABEL__,0.5>,<communic,0.5>,<scholar,0.5>
+composer	<__LABEL__,0.5>,<compos,0.5>
+computer scientist	<__LABEL__,0.5>,<comput,0.5>,<scientist,0.5>
+conductor	<__LABEL__,0.5>,<conductor,0.5>
+count	<__LABEL__,0.5>,<count,0.5>
+county cricketer	<__LABEL__,0.5>,<counti,0.5>,<cricket,0.5>
+cricket player	<__LABEL__,0.5>,<cricket,0.5>,<player,0.5>
+cricketer	<__LABEL__,0.5>,<cricket,0.5>
+criminal	<__LABEL__,0.5>,<crimin,0.5>
+critic	<__LABEL__,0.5>,<critic,0.5>
+cross-country skier	<__LABEL__,0.5>,<cross,0.5>,<countri,0.5>,<skier,0.5>
+cultural anthropologist	<__LABEL__,0.5>,<cultur,0.5>,<anthropologist,0.5>
+curler	<__LABEL__,0.5>,<curler,0.5>
+cyberneticist	<__LABEL__,0.5>,<cyberneticist,0.5>
+cyclist	<__LABEL__,0.5>,<cyclist,0.5>
+daimyo	<__LABEL__,0.5>,<daimyo,0.5>
+dancer	<__LABEL__,0.5>,<dancer,0.5>
+darts player	<__LABEL__,0.5>,<dart,0.5>,<player,0.5>
+designer	<__LABEL__,0.5>,<design,0.5>
+diarist	<__LABEL__,0.5>,<diarist,0.5>
+diplomat	<__LABEL__,0.5>,<diplomat,0.5>
+director	<__LABEL__,0.5>,<director,0.5>
+discoverer	<__LABEL__,0.5>,<discover,0.5>
+discus thrower	<__LABEL__,0.5>,<discus,0.5>,<thrower,0.5>
+distance runner	<__LABEL__,0.5>,<distanc,0.5>,<runner,0.5>
+diver	<__LABEL__,0.5>,<diver,0.5>
+dj	<__LABEL__,0.5>,<dj,0.5>
+doctor	<__LABEL__,0.5>,<doctor,0.5>
+dramatist	<__LABEL__,0.5>,<dramatist,0.5>
+drummer	<__LABEL__,0.5>,<drummer,0.5>
+duke	<__LABEL__,0.5>,<duke,0.5>
+earl	<__LABEL__,0.5>,<earl,0.5>
+earth scientist	<__LABEL__,0.5>,<earth,0.5>,<scientist,0.5>
+ecclesiastical architect	<__LABEL__,0.5>,<ecclesiast,0.5>,<architect,0.5>
+ecologist	<__LABEL__,0.5>,<ecologist,0.5>
+econometrician	<__LABEL__,0.5>,<econometrician,0.5>
+economic historian	<__LABEL__,0.5>,<econom,0.5>,<historian,0.5>
+economics writer	<__LABEL__,0.5>,<econom,0.5>,<writer,0.5>
+economist	<__LABEL__,0.5>,<economist,0.5>
+editor	<__LABEL__,0.5>,<editor,0.5>
+educator	<__LABEL__,0.5>,<educ,0.5>
+egyptologist	<__LABEL__,0.5>,<egyptologist,0.5>
+emperor	<__LABEL__,0.5>,<emperor,0.5>
+engineer	<__LABEL__,0.5>,<engin,0.5>
+engraver	<__LABEL__,0.5>,<engrav,0.5>
+entertainer	<__LABEL__,0.5>,<entertain,0.5>
+entomologist	<__LABEL__,0.5>,<entomologist,0.5>
+entrepreneur	<__LABEL__,0.5>,<entrepreneur,0.5>
+environmentalist	<__LABEL__,0.5>,<environmentalist,0.5>
+equestrian	<__LABEL__,0.5>,<equestrian,0.5>
+er	<__LABEL__,0.5>,<er,0.5>
+essayist	<__LABEL__,0.5>,<essayist,0.5>
+ethnographer	<__LABEL__,0.5>,<ethnograph,0.5>
+ethnologist	<__LABEL__,0.5>,<ethnologist,0.5>
+evolutionary biologist	<__LABEL__,0.5>,<evolutionari,0.5>,<biologist,0.5>
+executive office	<__LABEL__,0.5>,<execut,0.5>,<offic,0.5>
+explorer	<__LABEL__,0.5>,<explor,0.5>
+farmer	<__LABEL__,0.5>,<farmer,0.5>
+fashion designer	<__LABEL__,0.5>,<fashion,0.5>,<design,0.5>
+federal judge	<__LABEL__,0.5>,<feder,0.5>,<judg,0.5>
+fencer	<__LABEL__,0.5>,<fencer,0.5>
+fictional pseudoscientist	<__LABEL__,0.5>,<fiction,0.5>,<pseudoscientist,0.5>
+fictional scientist	<__LABEL__,0.5>,<fiction,0.5>,<scientist,0.5>
+field athlete	<__LABEL__,0.5>,<field,0.5>,<athlet,0.5>
+field hockey player	<__LABEL__,0.5>,<field,0.5>,<hockey,0.5>,<player,0.5>
+fighter ace	<__LABEL__,0.5>,<fighter,0.5>,<ace,0.5>
+figure skater	<__LABEL__,0.5>,<figur,0.5>,<skater,0.5>
+film	<__LABEL__,0.5>,<film,0.5>
+film actor	<__LABEL__,0.5>,<film,0.5>,<actor,0.5>
+film actress	<__LABEL__,0.5>,<film,0.5>,<actress,0.5>
+film director	<__LABEL__,0.5>,<film,0.5>,<director,0.5>
+film editor	<__LABEL__,0.5>,<film,0.5>,<editor,0.5>
+film producer	<__LABEL__,0.5>,<film,0.5>,<produc,0.5>
+filmmaker	<__LABEL__,0.5>,<filmmak,0.5>
+fluid dynamicist	<__LABEL__,0.5>,<fluid,0.5>,<dynamicist,0.5>
+flying ace	<__LABEL__,0.5>,<fli,0.5>,<ace,0.5>
+folklorist	<__LABEL__,0.5>,<folklorist,0.5>
+football	<__LABEL__,0.5>,<footbal,0.5>
+football coach	<__LABEL__,0.5>,<footbal,0.5>,<coach,0.5>
+football manager	<__LABEL__,0.5>,<footbal,0.5>,<manag,0.5>
+football player	<__LABEL__,0.5>,<footbal,0.5>,<player,0.5>
+football player/manager	<__LABEL__,0.5>,<footbal,0.5>,<player,0.5>,<manag,0.5>
+football referee	<__LABEL__,0.5>,<footbal,0.5>,<refere,0.5>
+footballer	<__LABEL__,0.5>,<footbal,0.5>
+former world record-holder	<__LABEL__,0.5>,<former,0.5>,<world,0.5>,<record,0.5>,<holder,0.5>
+founder	<__LABEL__,0.5>,<founder,0.5>
+freestyle skier	<__LABEL__,0.5>,<freestyl,0.5>,<skier,0.5>
+gaelic football player	<__LABEL__,0.5>,<gaelic,0.5>,<footbal,0.5>,<player,0.5>
+gaelic footballer	<__LABEL__,0.5>,<gaelic,0.5>,<footbal,0.5>
+gardener	<__LABEL__,0.5>,<garden,0.5>
+genealogist	<__LABEL__,0.5>,<genealogist,0.5>
+general	<__LABEL__,0.5>,<general,0.5>
+geneticist	<__LABEL__,0.5>,<geneticist,0.5>
+geographer	<__LABEL__,0.5>,<geograph,0.5>
+geologist	<__LABEL__,0.5>,<geologist,0.5>
+geophysicist	<__LABEL__,0.5>,<geophysicist,0.5>
+governor	<__LABEL__,0.5>,<governor,0.5>
+gr	<__LABEL__,0.5>,<gr,0.5>
+grammarian	<__LABEL__,0.5>,<grammarian,0.5>
+guitarist	<__LABEL__,0.5>,<guitarist,0.5>
+gymnast	<__LABEL__,0.5>,<gymnast,0.5>
+h	<__LABEL__,0.5>,<h,0.5>
+hammer thrower	<__LABEL__,0.5>,<hammer,0.5>,<thrower,0.5>
+hebraist	<__LABEL__,0.5>,<hebraist,0.5>
+herzegovina footballer	<__LABEL__,0.5>,<herzegovina,0.5>,<footbal,0.5>
+high jumper	<__LABEL__,0.5>,<high,0.5>,<jumper,0.5>
+hispanic and latino american actress	<__LABEL__,0.5>,<hispan,0.5>,<latino,0.5>,<american,0.5>,<actress,0.5>
+historian	<__LABEL__,0.5>,<historian,0.5>
+horticulturists and gardener	<__LABEL__,0.5>,<horticulturist,0.5>,<garden,0.5>
+hurdler	<__LABEL__,0.5>,<hurdler,0.5>
+hurler	<__LABEL__,0.5>,<hurler,0.5>
+ice dancer	<__LABEL__,0.5>,<ice,0.5>,<dancer,0.5>
+ice hockey defenceman	<__LABEL__,0.5>,<ice,0.5>,<hockey,0.5>,<defenceman,0.5>
+ice hockey goaltender	<__LABEL__,0.5>,<ice,0.5>,<hockey,0.5>,<goaltend,0.5>
+ice hockey player	<__LABEL__,0.5>,<ice,0.5>,<hockey,0.5>,<player,0.5>
+icel	<__LABEL__,0.5>,<icel,0.5>
+illustrator	<__LABEL__,0.5>,<illustr,0.5>
+immunologist	<__LABEL__,0.5>,<immunologist,0.5>
+indologist	<__LABEL__,0.5>,<indologist,0.5>
+intellectual historian	<__LABEL__,0.5>,<intellectu,0.5>,<historian,0.5>
+international relations scholar	<__LABEL__,0.5>,<intern,0.5>,<relat,0.5>,<scholar,0.5>
+inventor	<__LABEL__,0.5>,<inventor,0.5>
+javelin thrower	<__LABEL__,0.5>,<javelin,0.5>,<thrower,0.5>
+jazz musician	<__LABEL__,0.5>,<jazz,0.5>,<musician,0.5>
+jockey	<__LABEL__,0.5>,<jockey,0.5>
+journalist	<__LABEL__,0.5>,<journalist,0.5>
+judge	<__LABEL__,0.5>,<judg,0.5>
+judoka	<__LABEL__,0.5>,<judoka,0.5>
+jurist	<__LABEL__,0.5>,<jurist,0.5>
+king	<__LABEL__,0.5>,<king,0.5>
+knight's cross recipient	<__LABEL__,0.5>,<knight,0.5>,<cross,0.5>,<recipi,0.5>
+l	<__LABEL__,0.5>,<l,0.5>
+lacrosse player	<__LABEL__,0.5>,<lacross,0.5>,<player,0.5>
+landscape architect	<__LABEL__,0.5>,<landscap,0.5>,<architect,0.5>
+landscape or garden designer	<__LABEL__,0.5>,<landscap,0.5>,<garden,0.5>,<design,0.5>
+lawyer	<__LABEL__,0.5>,<lawyer,0.5>
+leader	<__LABEL__,0.5>,<leader,0.5>
+legal scholar	<__LABEL__,0.5>,<legal,0.5>,<scholar,0.5>
+lepidopterist	<__LABEL__,0.5>,<lepidopterist,0.5>
+lexicographer	<__LABEL__,0.5>,<lexicograph,0.5>
+librarian	<__LABEL__,0.5>,<librarian,0.5>
+linguist	<__LABEL__,0.5>,<linguist,0.5>
+literary critic	<__LABEL__,0.5>,<literari,0.5>,<critic,0.5>
+literature educator	<__LABEL__,0.5>,<literatur,0.5>,<educ,0.5>
+logician	<__LABEL__,0.5>,<logician,0.5>
+long jumper	<__LABEL__,0.5>,<long,0.5>,<jumper,0.5>
+long-distance runner	<__LABEL__,0.5>,<long,0.5>,<distanc,0.5>,<runner,0.5>
+luger	<__LABEL__,0.5>,<luger,0.5>
+major league baseball pitcher	<__LABEL__,0.5>,<major,0.5>,<leagu,0.5>,<basebal,0.5>,<pitcher,0.5>
+major league baseball player	<__LABEL__,0.5>,<major,0.5>,<leagu,0.5>,<basebal,0.5>,<player,0.5>
+malacologist	<__LABEL__,0.5>,<malacologist,0.5>
+manager	<__LABEL__,0.5>,<manag,0.5>
+manga artist	<__LABEL__,0.5>,<manga,0.5>,<artist,0.5>
+marine	<__LABEL__,0.5>,<marin,0.5>
+marine biologist	<__LABEL__,0.5>,<marin,0.5>,<biologist,0.5>
+marine corps medal	<__LABEL__,0.5>,<marin,0.5>,<corp,0.5>,<medal,0.5>
+martial artist	<__LABEL__,0.5>,<martial,0.5>,<artist,0.5>
+martyr	<__LABEL__,0.5>,<martyr,0.5>
+master	<__LABEL__,0.5>,<master,0.5>
+materials scientist	<__LABEL__,0.5>,<materi,0.5>,<scientist,0.5>
+materials scientists and engineer	<__LABEL__,0.5>,<materi,0.5>,<scientist,0.5>,<engin,0.5>
+mathematician	<__LABEL__,0.5>,<mathematician,0.5>
+mayor	<__LABEL__,0.5>,<mayor,0.5>
+medal	<__LABEL__,0.5>,<medal,0.5>
+medical biography	<__LABEL__,0.5>,<medic,0.5>,<biographi,0.5>
+medical doctor	<__LABEL__,0.5>,<medic,0.5>,<doctor,0.5>
+medical researcher	<__LABEL__,0.5>,<medic,0.5>,<research,0.5>
+medievalist	<__LABEL__,0.5>,<medievalist,0.5>
+memoirist	<__LABEL__,0.5>,<memoirist,0.5>
+merchant	<__LABEL__,0.5>,<merchant,0.5>
+mesoamericanist	<__LABEL__,0.5>,<mesoamericanist,0.5>
+metallurgist	<__LABEL__,0.5>,<metallurgist,0.5>
+meteorologist	<__LABEL__,0.5>,<meteorologist,0.5>
+microbiologist	<__LABEL__,0.5>,<microbiologist,0.5>
+middle distance runner	<__LABEL__,0.5>,<middl,0.5>,<distanc,0.5>,<runner,0.5>
+military historian	<__LABEL__,0.5>,<militari,0.5>,<historian,0.5>
+military officer	<__LABEL__,0.5>,<militari,0.5>,<offic,0.5>
+mineralogist	<__LABEL__,0.5>,<mineralogist,0.5>
+minister	<__LABEL__,0.5>,<minist,0.5>
+missionary	<__LABEL__,0.5>,<missionari,0.5>
+mixed martial artist	<__LABEL__,0.5>,<mix,0.5>,<martial,0.5>,<artist,0.5>
+mobster	<__LABEL__,0.5>,<mobster,0.5>
+model	<__LABEL__,0.5>,<model,0.5>
+molecular biologist	<__LABEL__,0.5>,<molecular,0.5>,<biologist,0.5>
+motorcycle racer	<__LABEL__,0.5>,<motorcycl,0.5>,<racer,0.5>
+murderer	<__LABEL__,0.5>,<murder,0.5>
+music producer	<__LABEL__,0.5>,<music,0.5>,<produc,0.5>
+musical theatre actor	<__LABEL__,0.5>,<music,0.5>,<theatr,0.5>,<actor,0.5>
+musical theatre actress	<__LABEL__,0.5>,<music,0.5>,<theatr,0.5>,<actress,0.5>
+musician	<__LABEL__,0.5>,<musician,0.5>
+musicologist	<__LABEL__,0.5>,<musicologist,0.5>
+mycologist	<__LABEL__,0.5>,<mycologist,0.5>
+national academy	<__LABEL__,0.5>,<nation,0.5>,<academi,0.5>
+natural philosopher	<__LABEL__,0.5>,<natur,0.5>,<philosoph,0.5>
+naturalist	<__LABEL__,0.5>,<naturalist,0.5>
+naval officer	<__LABEL__,0.5>,<naval,0.5>,<offic,0.5>
+navy admiral	<__LABEL__,0.5>,<navi,0.5>,<admir,0.5>
+navy medal	<__LABEL__,0.5>,<navi,0.5>,<medal,0.5>
+navy officer	<__LABEL__,0.5>,<navi,0.5>,<offic,0.5>
+negro league baseball player	<__LABEL__,0.5>,<negro,0.5>,<leagu,0.5>,<basebal,0.5>,<player,0.5>
+netball player	<__LABEL__,0.5>,<netbal,0.5>,<player,0.5>
+neurologist	<__LABEL__,0.5>,<neurologist,0.5>
+neuroscientist	<__LABEL__,0.5>,<neuroscientist,0.5>
+new zeal	<__LABEL__,0.5>,<new,0.5>,<zeal,0.5>
+newspaper editor	<__LABEL__,0.5>,<newspap,0.5>,<editor,0.5>
+noble	<__LABEL__,0.5>,<nobl,0.5>
+nobleman	<__LABEL__,0.5>,<nobleman,0.5>
+nordic combined skier	<__LABEL__,0.5>,<nordic,0.5>,<combin,0.5>,<skier,0.5>
+novelist	<__LABEL__,0.5>,<novelist,0.5>
+nuclear physicist	<__LABEL__,0.5>,<nuclear,0.5>,<physicist,0.5>
+oceanographer	<__LABEL__,0.5>,<oceanograph,0.5>
+offensive lineman	<__LABEL__,0.5>,<offens,0.5>,<lineman,0.5>
+officer	<__LABEL__,0.5>,<offic,0.5>
+olympian	<__LABEL__,0.5>,<olympian,0.5>
+olympic alpine skier	<__LABEL__,0.5>,<olymp,0.5>,<alpin,0.5>,<skier,0.5>
+olympic athlete	<__LABEL__,0.5>,<olymp,0.5>,<athlet,0.5>
+olympic basketball player	<__LABEL__,0.5>,<olymp,0.5>,<basketbal,0.5>,<player,0.5>
+olympic field hockey player	<__LABEL__,0.5>,<olymp,0.5>,<field,0.5>,<hockey,0.5>,<player,0.5>
+olympic footballer	<__LABEL__,0.5>,<olymp,0.5>,<footbal,0.5>
+olympic gold medalist	<__LABEL__,0.5>,<olymp,0.5>,<gold,0.5>,<medalist,0.5>
+olympic gymnast	<__LABEL__,0.5>,<olymp,0.5>,<gymnast,0.5>
+olympic h	<__LABEL__,0.5>,<olymp,0.5>,<h,0.5>
+olympic judoka	<__LABEL__,0.5>,<olymp,0.5>,<judoka,0.5>
+olympic medalist	<__LABEL__,0.5>,<olymp,0.5>,<medalist,0.5>
+olympic rower	<__LABEL__,0.5>,<olymp,0.5>,<rower,0.5>
+olympic swimmer	<__LABEL__,0.5>,<olymp,0.5>,<swimmer,0.5>
+olympic water polo player	<__LABEL__,0.5>,<olymp,0.5>,<water,0.5>,<polo,0.5>,<player,0.5>
+olympic weightlifter	<__LABEL__,0.5>,<olymp,0.5>,<weightlift,0.5>
+olympic wrestler	<__LABEL__,0.5>,<olymp,0.5>,<wrestler,0.5>
+opera singer	<__LABEL__,0.5>,<opera,0.5>,<singer,0.5>
+organist	<__LABEL__,0.5>,<organist,0.5>
+orientalist	<__LABEL__,0.5>,<orientalist,0.5>
+orienteer	<__LABEL__,0.5>,<orient,0.5>
+ornithologist	<__LABEL__,0.5>,<ornithologist,0.5>
+painter	<__LABEL__,0.5>,<painter,0.5>
+paleontologist	<__LABEL__,0.5>,<paleontologist,0.5>
+paralympian	<__LABEL__,0.5>,<paralympian,0.5>
+paralympic athlete	<__LABEL__,0.5>,<paralymp,0.5>,<athlet,0.5>
+paralympic swimmer	<__LABEL__,0.5>,<paralymp,0.5>,<swimmer,0.5>
+pathologist	<__LABEL__,0.5>,<pathologist,0.5>
+pentathlete	<__LABEL__,0.5>,<pentathlet,0.5>
+philanthropist	<__LABEL__,0.5>,<philanthropist,0.5>
+philologist	<__LABEL__,0.5>,<philologist,0.5>
+philosopher	<__LABEL__,0.5>,<philosoph,0.5>
+photographer	<__LABEL__,0.5>,<photograph,0.5>
+physical chemist	<__LABEL__,0.5>,<physic,0.5>,<chemist,0.5>
+physician	<__LABEL__,0.5>,<physician,0.5>
+physicist	<__LABEL__,0.5>,<physicist,0.5>
+physiologist	<__LABEL__,0.5>,<physiologist,0.5>
+pianist	<__LABEL__,0.5>,<pianist,0.5>
+planetary scientist	<__LABEL__,0.5>,<planetari,0.5>,<scientist,0.5>
+player	<__LABEL__,0.5>,<player,0.5>
+playwright	<__LABEL__,0.5>,<playwright,0.5>
+poet	<__LABEL__,0.5>,<poet,0.5>
+poker player	<__LABEL__,0.5>,<poker,0.5>,<player,0.5>
+police officer	<__LABEL__,0.5>,<polic,0.5>,<offic,0.5>
+political activist	<__LABEL__,0.5>,<polit,0.5>,<activist,0.5>
+political scientist	<__LABEL__,0.5>,<polit,0.5>,<scientist,0.5>
+politician	<__LABEL__,0.5>,<politician,0.5>
+pornographic actor	<__LABEL__,0.5>,<pornograph,0.5>,<actor,0.5>
+pornographic film actor	<__LABEL__,0.5>,<pornograph,0.5>,<film,0.5>,<actor,0.5>
+president	<__LABEL__,0.5>,<presid,0.5>
+priest	<__LABEL__,0.5>,<priest,0.5>
+prime minister	<__LABEL__,0.5>,<prime,0.5>,<minist,0.5>
+prince	<__LABEL__,0.5>,<princ,0.5>
+princes	<__LABEL__,0.5>,<princ,0.5>
+producer	<__LABEL__,0.5>,<produc,0.5>
+professional baseball player	<__LABEL__,0.5>,<profession,0.5>,<basebal,0.5>,<player,0.5>
+professional basketball player	<__LABEL__,0.5>,<profession,0.5>,<basketbal,0.5>,<player,0.5>
+professional football player	<__LABEL__,0.5>,<profession,0.5>,<footbal,0.5>,<player,0.5>
+professional footballer	<__LABEL__,0.5>,<profession,0.5>,<footbal,0.5>
+professional golfer	<__LABEL__,0.5>,<profession,0.5>,<golfer,0.5>
+professional wrestler	<__LABEL__,0.5>,<profession,0.5>,<wrestler,0.5>
+professor	<__LABEL__,0.5>,<professor,0.5>
+pseudoscientist	<__LABEL__,0.5>,<pseudoscientist,0.5>
+psychiatrist	<__LABEL__,0.5>,<psychiatrist,0.5>
+psychoanalyst	<__LABEL__,0.5>,<psychoanalyst,0.5>
+psychologist	<__LABEL__,0.5>,<psychologist,0.5>
+ptolemy	<__LABEL__,0.5>,<ptolemi,0.5>
+publisher	<__LABEL__,0.5>,<publish,0.5>
+rabbi	<__LABEL__,0.5>,<rabbi,0.5>
+racecar driver	<__LABEL__,0.5>,<racecar,0.5>,<driver,0.5>
+racewalker	<__LABEL__,0.5>,<racewalk,0.5>
+racing cyclist	<__LABEL__,0.5>,<race,0.5>,<cyclist,0.5>
+racing driver	<__LABEL__,0.5>,<race,0.5>,<driver,0.5>
+radio actor	<__LABEL__,0.5>,<radio,0.5>,<actor,0.5>
+radio actress	<__LABEL__,0.5>,<radio,0.5>,<actress,0.5>
+radio personality	<__LABEL__,0.5>,<radio,0.5>,<person,0.5>
+rapper	<__LABEL__,0.5>,<rapper,0.5>
+recipient	<__LABEL__,0.5>,<recipi,0.5>
+record producer	<__LABEL__,0.5>,<record,0.5>,<produc,0.5>
+republic baseball player	<__LABEL__,0.5>,<republ,0.5>,<basebal,0.5>,<player,0.5>
+revolutionary	<__LABEL__,0.5>,<revolutionari,0.5>
+road bicycle racer	<__LABEL__,0.5>,<road,0.5>,<bicycl,0.5>,<racer,0.5>
+rower	<__LABEL__,0.5>,<rower,0.5>
+royal air force air marshal	<__LABEL__,0.5>,<royal,0.5>,<air,0.5>,<forc,0.5>,<air,0.5>,<marshal,0.5>
+royal navy admiral	<__LABEL__,0.5>,<royal,0.5>,<navi,0.5>,<admir,0.5>
+rugby league player	<__LABEL__,0.5>,<rugbi,0.5>,<leagu,0.5>,<player,0.5>
+rugby player	<__LABEL__,0.5>,<rugbi,0.5>,<player,0.5>
+rugby union	<__LABEL__,0.5>,<rugbi,0.5>,<union,0.5>
+rugby union player	<__LABEL__,0.5>,<rugbi,0.5>,<union,0.5>,<player,0.5>
+ruler	<__LABEL__,0.5>,<ruler,0.5>
+rules footballer	<__LABEL__,0.5>,<rule,0.5>,<footbal,0.5>
+runner	<__LABEL__,0.5>,<runner,0.5>
+sailor	<__LABEL__,0.5>,<sailor,0.5>
+saint	<__LABEL__,0.5>,<saint,0.5>
+samurai	<__LABEL__,0.5>,<samurai,0.5>
+scholar	<__LABEL__,0.5>,<scholar,0.5>
+science writer	<__LABEL__,0.5>,<scienc,0.5>,<writer,0.5>
+screen actor	<__LABEL__,0.5>,<screen,0.5>,<actor,0.5>
+screenwriter	<__LABEL__,0.5>,<screenwrit,0.5>
+sculptor	<__LABEL__,0.5>,<sculptor,0.5>
+senator	<__LABEL__,0.5>,<senat,0.5>
+serial killer	<__LABEL__,0.5>,<serial,0.5>,<killer,0.5>
+short story writer	<__LABEL__,0.5>,<short,0.5>,<stori,0.5>,<writer,0.5>
+shot putter	<__LABEL__,0.5>,<shot,0.5>,<putter,0.5>
+silent film actor	<__LABEL__,0.5>,<silent,0.5>,<film,0.5>,<actor,0.5>
+silent film actress	<__LABEL__,0.5>,<silent,0.5>,<film,0.5>,<actress,0.5>
+singer	<__LABEL__,0.5>,<singer,0.5>
+singer-songwriter	<__LABEL__,0.5>,<singer,0.5>,<songwrit,0.5>
+sinologist	<__LABEL__,0.5>,<sinologist,0.5>
+ski jumper	<__LABEL__,0.5>,<ski,0.5>,<jumper,0.5>
+ski mountaineer	<__LABEL__,0.5>,<ski,0.5>,<mountain,0.5>
+skier	<__LABEL__,0.5>,<skier,0.5>
+snooker player	<__LABEL__,0.5>,<snooker,0.5>,<player,0.5>
+snowboarder	<__LABEL__,0.5>,<snowboard,0.5>
+soap opera actor	<__LABEL__,0.5>,<soap,0.5>,<opera,0.5>,<actor,0.5>
+soap opera actress	<__LABEL__,0.5>,<soap,0.5>,<opera,0.5>,<actress,0.5>
+soccer player	<__LABEL__,0.5>,<soccer,0.5>,<player,0.5>
+soccer player-coach	<__LABEL__,0.5>,<soccer,0.5>,<player,0.5>,<coach,0.5>
+social sciences writer	<__LABEL__,0.5>,<social,0.5>,<scienc,0.5>,<writer,0.5>
+social scientist	<__LABEL__,0.5>,<social,0.5>,<scientist,0.5>
+sociologist	<__LABEL__,0.5>,<sociologist,0.5>
+softball player	<__LABEL__,0.5>,<softbal,0.5>,<player,0.5>
+soldier	<__LABEL__,0.5>,<soldier,0.5>
+songwriter	<__LABEL__,0.5>,<songwrit,0.5>
+sound engineer	<__LABEL__,0.5>,<sound,0.5>,<engin,0.5>
+speed skater	<__LABEL__,0.5>,<speed,0.5>,<skater,0.5>
+speedway rider	<__LABEL__,0.5>,<speedway,0.5>,<rider,0.5>
+sport shooter	<__LABEL__,0.5>,<sport,0.5>,<shooter,0.5>
+sportsman	<__LABEL__,0.5>,<sportsman,0.5>
+sprinter	<__LABEL__,0.5>,<sprinter,0.5>
+stage actor	<__LABEL__,0.5>,<stage,0.5>,<actor,0.5>
+stage actress	<__LABEL__,0.5>,<stage,0.5>,<actress,0.5>
+statistician	<__LABEL__,0.5>,<statistician,0.5>
+stock car racing driver	<__LABEL__,0.5>,<stock,0.5>,<car,0.5>,<race,0.5>,<driver,0.5>
+sumo wrestler	<__LABEL__,0.5>,<sumo,0.5>,<wrestler,0.5>
+surgeon	<__LABEL__,0.5>,<surgeon,0.5>
+swimmer	<__LABEL__,0.5>,<swimmer,0.5>
+systems scientist	<__LABEL__,0.5>,<system,0.5>,<scientist,0.5>
+table tennis player	<__LABEL__,0.5>,<tabl,0.5>,<tenni,0.5>,<player,0.5>
+taekwondo practitioner	<__LABEL__,0.5>,<taekwondo,0.5>,<practition,0.5>
+teacher	<__LABEL__,0.5>,<teacher,0.5>
+telenovela actor	<__LABEL__,0.5>,<telenovela,0.5>,<actor,0.5>
+telenovela actress	<__LABEL__,0.5>,<telenovela,0.5>,<actress,0.5>
+television	<__LABEL__,0.5>,<televis,0.5>
+television actor	<__LABEL__,0.5>,<televis,0.5>,<actor,0.5>
+television actress	<__LABEL__,0.5>,<televis,0.5>,<actress,0.5>
+television director	<__LABEL__,0.5>,<televis,0.5>,<director,0.5>
+television meteorologist	<__LABEL__,0.5>,<televis,0.5>,<meteorologist,0.5>
+television personality	<__LABEL__,0.5>,<televis,0.5>,<person,0.5>
+television presenter	<__LABEL__,0.5>,<televis,0.5>,<present,0.5>
+television producer	<__LABEL__,0.5>,<televis,0.5>,<produc,0.5>
+television writer	<__LABEL__,0.5>,<televis,0.5>,<writer,0.5>
+telugu actor	<__LABEL__,0.5>,<telugu,0.5>,<actor,0.5>
+tennis player	<__LABEL__,0.5>,<tenni,0.5>,<player,0.5>
+test	<__LABEL__,0.5>,<test,0.5>
+theatre actor	<__LABEL__,0.5>,<theatr,0.5>,<actor,0.5>
+theatre director	<__LABEL__,0.5>,<theatr,0.5>,<director,0.5>
+theologian	<__LABEL__,0.5>,<theologian,0.5>
+theoretical physicist	<__LABEL__,0.5>,<theoret,0.5>,<physicist,0.5>
+track	<__LABEL__,0.5>,<track,0.5>
+trade unionist	<__LABEL__,0.5>,<trade,0.5>,<unionist,0.5>
+translator	<__LABEL__,0.5>,<translat,0.5>
+triathlete	<__LABEL__,0.5>,<triathlet,0.5>
+trinidad	<__LABEL__,0.5>,<trinidad,0.5>
+triple jumper	<__LABEL__,0.5>,<tripl,0.5>,<jumper,0.5>
+trotskyism	<__LABEL__,0.5>,<trotskyism,0.5>
+trotskyist	<__LABEL__,0.5>,<trotskyist,0.5>
+union army general	<__LABEL__,0.5>,<union,0.5>,<armi,0.5>,<general,0.5>
+union army officer	<__LABEL__,0.5>,<union,0.5>,<armi,0.5>,<offic,0.5>
+vaulter	<__LABEL__,0.5>,<vaulter,0.5>
+video game actor	<__LABEL__,0.5>,<video,0.5>,<game,0.5>,<actor,0.5>
+violinist	<__LABEL__,0.5>,<violinist,0.5>
+virologist	<__LABEL__,0.5>,<virologist,0.5>
+voice actor	<__LABEL__,0.5>,<voic,0.5>,<actor,0.5>
+voice actres	<__LABEL__,0.5>,<voic,0.5>,<actr,0.5>
+voice actress	<__LABEL__,0.5>,<voic,0.5>,<actress,0.5>
+volleyball player	<__LABEL__,0.5>,<volleybal,0.5>,<player,0.5>
+water polo player	<__LABEL__,0.5>,<water,0.5>,<polo,0.5>,<player,0.5>
+weightlifter	<__LABEL__,0.5>,<weightlift,0.5>
+wife	<__LABEL__,0.5>,<wife,0.5>
+wrestler	<__LABEL__,0.5>,<wrestler,0.5>
+writer	<__LABEL__,0.5>,<writer,0.5>
+yacht racer	<__LABEL__,0.5>,<yacht,0.5>,<racer,0.5>
+zoologist	<__LABEL__,0.5>,<zoologist,0.5>

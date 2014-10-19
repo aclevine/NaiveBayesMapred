@@ -10,8 +10,6 @@ import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.TreeMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -99,5 +97,7 @@ public class ClassifyLocal {
 	        	}
 	        }	
 		}
+		
+		fw.close();
 	}		
 }
