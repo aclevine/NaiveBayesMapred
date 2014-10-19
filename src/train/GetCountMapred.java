@@ -90,9 +90,9 @@ public class GetCountMapred {
 	    			String lemma = si.getString();
 	    			Integer count = si.getValue();
 	    			if(wordcount.containsKey(si.getString())) {
-	                    wordcount.put(lemma,wordcount.get(lemma) + 1 );
+	                    wordcount.put(lemma,wordcount.get(lemma) + count ); // or +1
 	                } else {
-	                    wordcount.put(lemma, 1);
+	                    wordcount.put(lemma, count); // or +1
 	                }
 	    		}
 	    	}
@@ -119,14 +119,14 @@ public class GetCountMapred {
 	    }
 		Job job = Job.getInstance(conf, "get lemma counts per profession");
 		job.setJarByClass(GetCountMapred.class);
+		job.setMapperClass(GetCountMapper.class);
+		job.setReducerClass(GetCountReducer.class);
 		
 		job.setInputFormatClass(KeyValueTextInputFormat.class);
 		job.setMapOutputKeyClass(Text.class);
 		job.setMapOutputValueClass(StringIntegerList.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(StringIntegerList.class);
-		job.setMapperClass(GetCountMapper.class);
-		job.setReducerClass(GetCountReducer.class);
 		
 		FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
 		FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));

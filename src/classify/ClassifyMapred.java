@@ -38,6 +38,8 @@ public class ClassifyMapred {
 	public static class ClassifyMapper extends Mapper<Text, Text, Text, Text> {
 
 		public static Set<String> peopleArticlesTitles = new HashSet<String>();
+		public static Integer trainingArticleCount = 673988; //for normalization
+		
 		HashMap<String, HashMap<String, Double>> labelScores = new HashMap<String, HashMap<String, Double>>();
 		
 		protected void setup(Mapper<Text, Text, Text, Text>.Context context)
@@ -67,18 +69,28 @@ public class ClassifyMapred {
 				throws IOException, InterruptedException {
 			// TODO: build: 
 			// < Title,  <top 3 predictions above threshold> ] > 
+
+			//need to normalize over all terms. otherwise any label 
+			//with no observed tags in current doc will get best score
+			Double normalizedGuess = 1.0 / trainingArticleCount; 
+			
 			StringIntegerList list = new StringIntegerList();	
 			list.readFromString(indices.toString());
 	        TreeMap<Double,String> guesses = new TreeMap<Double,String>(Collections.reverseOrder());			
 	        for (String label : labelScores.keySet()) {
 	        	HashMap<String, Double> scores = labelScores.get(label);
-	        	//Double prob = Math.log( scores.get("__LABEL__") );
+	        	//Double prob = Math.log( scores.get("__LABEL__") ); // include label weight
 	        	Double prob = 0.0;
 	        	for (StringInteger index : list.getIndices()) {	
 					String lemma = index.getString();
 					int freq = index.getValue();
 					if (scores.containsKey(lemma)) {
 						prob += freq * Math.log(scores.get(lemma));
+					} else{
+						prob += freq * Math.log(normalizedGuess);
+						// need to normalize over all terms
+						// otherwise any label with no tags in 
+						// current doc will get best score
 					}
 	        	}
 	        	guesses.put(prob, label);

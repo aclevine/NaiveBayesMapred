@@ -2,12 +2,10 @@ package classify;
 
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URI;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -23,10 +21,15 @@ import utils.StringIntegerList.StringInteger;
 
 public class ClassifyLocal {
 
+	public static Integer trainingArticleCount = 673988; //normalization
+
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException, InterruptedException {
 
 		ClassifyLocal m = new ClassifyLocal();
+		Double normalizedGuess = 1.0 / trainingArticleCount;
+		//need to normalize over all terms. otherwise any label 
+		//with no observed tags in current doc will get best score
 		
 		//load probability dictionary
 		InputStream is = m.getClass().getResourceAsStream("probabilities");
@@ -48,7 +51,7 @@ public class ClassifyLocal {
 		}
 		br.close();
 		
-		//get numbers for test data	
+		//get counts from test data	
 		InputStream is2 = m.getClass().getResourceAsStream("test_data");
 		BufferedReader br2 = new BufferedReader(new InputStreamReader(is2)); //Open text
 
@@ -68,13 +71,20 @@ public class ClassifyLocal {
 	        	//Double prob = Math.log( scores.get("__LABEL__") ); //include label weighting
 	        	for (StringInteger index : lemmaCounts.getIndices()) {	
 					String lemma = index.getString();
+					Integer freq = index.getValue();
 					if (scores.containsKey(lemma)) {
-						Integer freq = index.getValue();
 						prob += freq * Math.log(scores.get(lemma));
+					} else{
+						prob += freq * Math.log(normalizedGuess);
+						// need to normalize over all terms
+						// otherwise any label with no tags in 
+						// current doc will get best score
 					}
 	        	}	        	
 	        	guesses.put(prob, label);
 	        }
+	        
+	        //return top 3 scores
 			String[] top3 = new String[3];
 			Integer i = 0;
 	        for (Double prob: guesses.keySet()){
