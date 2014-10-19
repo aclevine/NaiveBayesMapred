@@ -3,20 +3,15 @@ package classify;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -31,7 +26,6 @@ import utils.StringDoubleList.StringDouble;
 import utils.StringIntegerList;
 import utils.StringIntegerList.StringInteger;
 
-import java.lang.*;
 
 public class ClassifyMapred {
 
@@ -89,7 +83,7 @@ public class ClassifyMapred {
 					} else{
 						prob += freq * Math.log(normalizedGuess);
 						// need to normalize over all terms
-						// otherwise any label with no tags in 
+						// otherwise any label with no features in 
 						// current doc will get best score
 					}
 	        	}
