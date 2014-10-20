@@ -56,10 +56,10 @@ public class scoreDevSet {
         }
         br2.close();
         
-        System.out.println(goodCount.toString());
-        System.out.println(totalCount.toString());        
+        System.out.println(goodCount.toString() + " matches");
+        System.out.println(totalCount.toString() + " total records" );        
         Double p = (double)goodCount / totalCount;
-        System.out.println(p.toString());        
+        System.out.println(p.toString() + " psuedo-precision");        
         
 	}
 }
